@@ -222,5 +222,19 @@
             <src path="${gensrc.dir}"/>
         </javac>
     </target>
+    <manifest file="MANIFEST.MF">
+      <attribute name="Built-By" value="${user.name}"/>
+      <section name="common">
+        <attribute name="Specification-Title" value="Example"/>
+        <attribute name="Specification-Version" value="1"/>
+        <attribute name="Specification-Vendor" value="Example Organization"/>
+        <attribute name="Implementation-Title" value="common"/>
+        <attribute name="Implementation-Version" value="1"/>
+        <attribute name="Implementation-Vendor" value="Example Corp."/>
+      </section>
+      <section name="common/class1.class">
+        <attribute name="Sealed" value="false"/>
+      </section>
+    </manifest>
   
 </project>
